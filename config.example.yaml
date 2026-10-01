@@ -1,0 +1,19 @@
+poll_interval_seconds: 5
+idle_after_seconds: 15
+capture_lines: 40
+ssh_timeout_seconds: 8
+
+servers:
+  - id: gpu-01
+    name: GPU Server 01
+    host: 192.168.1.101
+    user: ubuntu
+    port: 22
+    # 可选；不填则使用 ssh-agent / ~/.ssh/config
+    identity_file: ~/.ssh/id_ed25519
+
+  - id: train-02
+    name: Training Server 02
+    host: train-02.example.internal
+    user: researcher
+    port: 22
